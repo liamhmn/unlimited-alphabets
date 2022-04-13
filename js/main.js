@@ -139,22 +139,22 @@ const UPGRADES = {
             2: {
                 unl: _=>{ return UPGRADES.bought('a', 1) },
                 desc: "Multiply a production by 5.",
-                cost: E(15),
+                cost: E(0.15),
             },
             3: {
                 unl: _=>{ return UPGRADES.bought('a', 1) },
                 desc: "Multiply a production by 10.",
-                cost: E(100),
+                cost: E(1),
             },
             4: {
                 unl: _=>{ return UPGRADES.bought('a', 3) },
                 desc: "Square a production.",
-                cost: E(2000),
+                cost: E(2),
             },
             5: {
                 unl: _=>{ return UPGRADES.bought('a', 4) },
                 desc: "Multiply a production based on unspent a.",
-                cost: E(1e7),
+                cost: E(17),
                 cur: _=>{
                     if (!player.alphabets.a) return E(1)
                     return player.alphabets.a.resource.add(1).log10().add(1).pow(1.25)
