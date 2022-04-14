@@ -111,7 +111,7 @@ const FUNCTIONS = {
         },
     },
     automators: {
-        cost: [E('e15'),E(15000)],
+        cost: [E('1'),E(10)],
         can: (x)=>{
             if (!player.alphabets[FUNCTIONS.alphabet(1+x+player.automators[x])]) return false
             return player.alphabets[FUNCTIONS.alphabet(1+x+player.automators[x])].resource.gte(FUNCTIONS.automators.cost[x])
