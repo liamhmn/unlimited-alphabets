@@ -165,17 +165,17 @@ const UPGRADES = {
             6: {
                 unl: _=>{ return UPGRADES.bought('a', 5) && player.alphabets.b },
                 desc: "Raise b gain by 1.1.",
-                cost: E(1e18),
+                cost: E(118),
             },
             7: {
                 unl: _=>{ return UPGRADES.bought('a', 6) && player.alphabets.c },
                 desc: "Gain 2x more b & c.",
-                cost: E(1e30),
+                cost: E(130),
             },
             8: {
                 unl: _=>{ return UPGRADES.bought('a', 7) },
                 desc: "Gain more alphabets except a based on unspent a.",
-                cost: E(1e45),
+                cost: E(145),
                 cur: _=>{
                     if (!player.alphabets.a) return E(1)
                     return player.alphabets.a.resource.add(1).log10().add(1).log10().add(1)
@@ -185,7 +185,7 @@ const UPGRADES = {
             9: {
                 unl: _=>{ return UPGRADES.bought('a', 8) && player.alphabets.d },
                 desc: "Gain 3x more a & d.",
-                cost: E(1e75),
+                cost: E(175),
             },
         },
         b: {
@@ -214,7 +214,7 @@ const UPGRADES = {
             4: {
                 unl: _=>{ return UPGRADES.bought('b', 3) },
                 desc: "Gain more b based on unspent a.",
-                cost: E(25000),
+                cost: E(20),
                 cur: _=>{
                     if (!player.alphabets.a) return E(1)
                     return player.alphabets.a.resource.add(1).log10().add(1).pow(1/2)
@@ -224,17 +224,17 @@ const UPGRADES = {
             5: {
                 unl: _=>{ return UPGRADES.bought('b', 4) },
                 desc: "Raise a production by 1.2.",
-                cost: E(5e7),
+                cost: E(57),
             },
             6: {
                 unl: _=>{ return UPGRADES.bought('b', 5) && player.alphabets.c },
                 desc: "Gain 2x more c.",
-                cost: E(1e15),
+                cost: E(15),
             },
             7: {
                 unl: _=>{ return UPGRADES.bought('b', 6) },
                 desc: "Gain 5x more a & b.",
-                cost: E(1e22),
+                cost: E(122),
             },
         },
         c: {
@@ -247,7 +247,7 @@ const UPGRADES = {
             2: {
                 unl: _=>{ return true },
                 desc: "Gain more a & b based on unspent c.",
-                cost: E(25),
+                cost: E(5),
                 cur: _=>{
                     if (!player.alphabets.c) return E(1)
                     return player.alphabets.c.resource.add(1).pow(1/4)
@@ -257,12 +257,12 @@ const UPGRADES = {
             3: {
                 unl: _=>{ return UPGRADES.bought('c', 2) },
                 desc: "Multiply a production by 10.",
-                cost: E(300),
+                cost: E(30),
             },
             4: {
                 unl: _=>{ return UPGRADES.bought('c', 2) },
                 desc: "Gain more b based on unspent b.",
-                cost: E(10000),
+                cost: E(10),
                 cur: _=>{
                     if (!player.alphabets.b) return E(1)
                     return player.alphabets.b.resource.add(1).logBase(100).add(1)
@@ -272,12 +272,12 @@ const UPGRADES = {
             5: {
                 unl: _=>{ return UPGRADES.bought('c', 4) },
                 desc: "Gain 2x c.",
-                cost: E(125000),
+                cost: E(100),
             },
             6: {
                 unl: _=>{ return UPGRADES.bought('c', 5) },
                 desc: "Raise b & c gain by 1.05.",
-                cost: E(1e15),
+                cost: E(115),
             },
         },
         d: {
@@ -295,7 +295,7 @@ const UPGRADES = {
             2: {
                 unl: _=>{ return true },
                 desc: "Gain more b & c alphabets based on unspent a.",
-                cost: E(50),
+                cost: E(5),
                 cur: _=>{
                     if (!player.alphabets.a) return E(1)
                     return player.alphabets.a.resource.add(1).pow(1/10).add(1).log10().add(1)
@@ -305,7 +305,7 @@ const UPGRADES = {
             3: {
                 unl: _=>{ return UPGRADES.bought('d', 2) },
                 desc: "Raise a upgrade 5 and b upgrade 2 effects by 1.15.",
-                cost: E(3500),
+                cost: E(35),
             }
         },
     },
